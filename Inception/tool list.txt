@@ -1,0 +1,27 @@
+Required: For team presentations you will need microphone and speakers on the device you are using for Microsoft Teams.
+
+Optional: The following are optional but recommended.
+
+Install and use the Microsoft Teams app (the web-based version misses certain features).Use a Windows or Mac laptop that has a built-in webcam. This will make it easier for you to present.Use a microphone that is built into a head-set or ear-phones.Log into the same Microsoft Teams meeting (i.e., this class) from several devices at the same time. For example, I will log into the class's Teams meeting on my PC (large screen but no webcam) and on my laptop / phone (webcam).There is also a Microsoft Teams app for iOS and Android.
+
+
+
+list of tools;
+Ethereum: Ethereum is the original decentralized platform for building and deploying smart contracts. It provides a platform for developers to build and deploy decentralized applications, as well as a programming language (Solidity) for writing smart contracts.
+
+Binance Smart Chain: Binance Smart Chain is a high-performance blockchain for decentralized applications. It allows developers to build and deploy dApps on a fast, secure, and low-cost blockchain network.
+
+TRON: TRON is a decentralized platform for building and deploying smart contracts and decentralized applications. It provides a high-performance blockchain network and a suite of development tools for building and deploying dApps.
+
+EOS: EOS is a decentralized platform for building and deploying dApps. It provides a fast and scalable blockchain network, as well as a set of development tools and resources for building and deploying dApps.
+
+Cardano: Cardano is a decentralized platform for building and deploying smart contracts and decentralized applications. It provides a secure and scalable blockchain network and a programming language (Plutus) for writing smart contracts.
+
+Binance Smart Chain (BSC) - Binance Smart Chain is a high-performance blockchain platform that enables the deployment of decentralized applications and smart contracts. It is compatible with Ethereum, allowing developers to write smart contracts in Solidity and deploy them on the Binance network.
+
+Polygon - Polygon (previously known as Matic Network) is a Layer 2 scaling solution for Ethereum that provides faster and cheaper transactions for dApps. It allows developers to deploy and run smart contracts on a separate layer from the Ethereum mainchain, providing improved scalability and lower fees.
+
+Aavegotchi - Aavegotchi is a decentralized gaming platform built on the Ethereum network. It uses smart contracts to create and manage collectible digital creatures, called Aavegotchis, that players can own, train, and battle with each other.
+
+Compound Finance - Compound Finance is a decentralized lending and borrowing platform built on the Ethereum network. It allows users to deposit and lend out their crypto assets, earning interest on their deposits, and borrow assets from the platform at a variable interest rate.
+
