@@ -1,0 +1,68 @@
+failed method 1:
+def process_ir(contract, ir):
+    if isinstance(ir, Read):
+        list_top_level.add(ir)
+    elif isinstance(ir, InternalCall) and isinstance(ir.function, FunctionTopLevel):
+        list_top_level.add(ir.function)
+    elif (
+        isinstance(ir, SolidityCall)
+        and isinstance(ir.function, SolidityCustomRevert)
+        and isinstance(ir.function.custom_error, TopLevel)
+    ):
+        list_top_level.add(ir.function.custom_error)
+    
+    list_contract.add(contract)
+
+# Usage example:
+for contract in contracts:
+    for ir in contract.ir_list:
+        process_ir(contract, ir)
+
+
+
+Failed method 2:
+
+list_top_level = [ir for contract in contracts for ir in contract.ir_list if isinstance(ir, Read)]
+list_top_level += [ir.function for contract in contracts for ir in contract.ir_list if isinstance(ir, InternalCall) and isinstance(ir.function, FunctionTopLevel)]
+list_top_level += [ir.function.custom_error for contract in contracts for ir in contract.ir_list if isinstance(ir, SolidityCall) and isinstance(ir.function, SolidityCustomRevert) and isinstance(ir.function.custom_error, TopLevel)]
+
+list_contract = contracts
+
+
+def custom_error(self) -> CustomError:
+        return self._custom_error
+    def __eq__(self, other: Union["SolidityCustomRevert", SolidityFunction]) -> bool:
+        return (
+            self.__class__ == other.__class__
+            and self.name == other.name
+            and self._custom_error == other._custom_error
+        )
+
+
+
+
+def custom_error(self) -> CustomError:
+    return self._custom_error
+This code defines a method named custom_error within a class. This method returns the value of the _custom_error attribute. It is expected that the class has a private attribute _custom_error which holds an instance of the CustomError class or one of its subclasses. The return type annotation -> CustomError indicates that the method is expected to return an object of type CustomError or its subclass.
+
+
+def __eq__(self, other: Union["SolidityCustomRevert", SolidityFunction]) -> bool:
+    return (
+        self.__class__ == other.__class__
+        and self.name == other.name
+        and self._custom_error == other._custom_error
+    )
+This code defines the __eq__ method, which is used to implement the equality comparison between instances of the class. It takes two parameters: self (representing the current instance) and other (representing the other object to compare against).
+
+The method compares the class of self with the class of other using self.__class__ == other.__class__. This ensures that the two objects are of the same class. Then it checks if the name attribute of self is equal to the name attribute of other. Finally, it compares the _custom_error attribute of self with the _custom_error attribute of other.
+
+If all these conditions are true, the method returns True, indicating that the two objects are considered equal. Otherwise, it returns False.
+
+This implementation allows instances of the class to be compared for equality using the == operator. The comparison is based on the class, name, and _custom_error attributes of the objects.
+
+Please note that the Union["SolidityCustomRevert", SolidityFunction] type hint indicates that other parameter can be either an instance of the SolidityCustomRevert class or the SolidityFunction class.
+
+
+
+
+
